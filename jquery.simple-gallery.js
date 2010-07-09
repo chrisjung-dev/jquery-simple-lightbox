@@ -1,3 +1,8 @@
+/*
+ * jquery.simple-gallery
+ * CC-BY-NC-SA Chris Jung <campino2k@gmail.com>
+ */
+
 $("a[href$='png']:has(img), a[href$='jpg']:has(img), a[href$='gif']:has(img)").click(
 	function(e) {
 		$this = $(this);
@@ -7,18 +12,6 @@ $("a[href$='png']:has(img), a[href$='jpg']:has(img), a[href$='gif']:has(img)").c
 				$(this).parent().trigger('click'); //fadeOut();
 			}
 		});
-/*
-		pic.css({display:'none'}).appendTo('body');
-                tried = 0;
-                picH = 0; picW = 0;
-                while( ( picH == 0 || picW == 0 ) && tried < 30 ) {
-                    window.setTimeOut("", 200)
-                    picH = pic.height();
-                    picW = pic.width();
-                    tried++;
-                    console.log(tried)
-                }
-*/
 		var xOvl = $('<div/>', {
 				'click': function(e){ $(this).remove()},
 				'id': 'simple-gallery-overly'
