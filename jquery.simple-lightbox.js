@@ -6,11 +6,11 @@ $(function(){
 	$("a[href$='png']:has(img), a[href$='jpg']:has(img), a[href$='gif']:has(img)").click(
 		function(e) {
 			$this = $(this);
-			var pic = $('<img />', {
-				'src': $this.attr('href'),
-				click: function(){
-					$(this).parent().trigger('click'); //fadeOut();
-				}
+			var pic = new Image();
+			$(pic).attr( src, $this.attr( 'href' ) );
+			$pic = $(pic);
+			$pic.click( function(){
+				$(this).parent().trigger('click');
 			});
 			var xOvl = $('<div/>', {
 					'click': function(e){ $(this).remove()},
