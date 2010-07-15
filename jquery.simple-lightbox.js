@@ -1,5 +1,5 @@
 /*
- * jquery.simple-gallery
+ * jquery.simple-lightbox
  * CC-BY-NC-SA Chris Jung <campino2k@gmail.com>
  */
 $(function(){
