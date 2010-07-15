@@ -10,3 +10,9 @@
 	background-color: #000;
 	background-color: rgba(0,0,0,0.8);
 }
+
+#simple-lightbox-overlay img {
+	position: absolute;
+	border: 5px solid #9bbdde;
+	z-index: 9999;
+}
