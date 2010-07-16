@@ -1,0 +1,10 @@
+====== jquery-simple-lightbox ======
+
+@author Chris Jung <campino2k@gmail.com
+@licence CC-BY-SA-NC
+
+===== Beschreibung =====
+
+Ein kleines jQuery-Snippet, dass eine einfache Lightbox erzeugt.
+
+Entwickelt wird das ganze für campino2k.de, wo das ganze eine "größere" Lightbox mit massig Overhead ersetzen soll.
