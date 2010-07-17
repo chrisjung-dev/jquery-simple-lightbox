@@ -3,12 +3,20 @@
 	<head>
 		<title>A simple Gallery with jQuery</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script src="jquery.simple-lightbox.js"></script>
 		<link rel="stylesheet" href="screen.css" />
 	</head>
 	<body>
 		<a href="http://www.23hq.com/23666/4990616_20a3461e0381ad696bc9546a1af229c1_large.jpg">
 			<img src="http://www.23hq.com/23666/4990616_20a3461e0381ad696bc9546a1af229c1_thumb.jpg" alt="Katze"/>
 		</a>
+		<a href="http://www.23hq.com/23666/5789429_2cb968ac6e98bcc6d667e538698e2797_large.jpg">
+			<img src="http://www.23hq.com/23666/5789429_2cb968ac6e98bcc6d667e538698e2797_thumb.jpg" alt="Flaschen"/>
+		</a>
+		<script src="jquery.simple-lightbox.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("a[href$='png']:has(img), a[href$='jpg']:has(img), a[href$='gif']:has(img)").simpleLightbox();
+		});
+		</script>
 	</body>
 </html>
