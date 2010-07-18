@@ -1,7 +1,10 @@
 /*
  * jquery.simple-lightbox
- * CC-BY-NC-SA Chris Jung <campino2k@gmail.com>
- */
+ * 
+ * @author  Chris Jung <campino2k@gmail.com>
+ * @license CC-BY-NC-SA
+ * 
+*/
 
 (function($) {
 	$.fn.simpleLightbox = function(options) {
@@ -16,9 +19,14 @@
 					},
 					css: ({
 						'height': $(document).height() + 'px'
-					})
+					}),
 				})
 				$ovl.appendTo( 'body' );
+				$(document).one( 'keydown',  function(e) { // add "self-destruct"-event	to close the lightbox
+					if( e.which == 27 ) {
+						$ovl.trigger('click');
+					}
+				})
 				$pic = $( '<img />', {
 					'src': $this.attr('href'),
 					css: ({'display': 'none'}),
