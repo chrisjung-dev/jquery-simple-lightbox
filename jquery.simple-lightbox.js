@@ -18,7 +18,8 @@
 						$(this).remove();
 					},
 					css: ({
-						'height': $(document).height() + 'px'
+						'height': $(document).height() + 'px',
+						'backgroundPosition': 'center ' + ($(window).height()/2) + 'px' // need to overreide the "center center"-CSS-Setting, if any, to center the loading icon in the viewport
 					}),
 				})
 				$ovl.appendTo( 'body' );
