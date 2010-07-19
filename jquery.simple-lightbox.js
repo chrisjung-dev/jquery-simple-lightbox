@@ -36,23 +36,25 @@
 						$(this).appendTo( $ovl ).css({
 							'top': ( ( $(window).height()/2) - ($pic.height() / 2) + $(document).scrollTop()  ) + "px",
 							'left': ( ( $(window).width()/2) - ($pic.width() / 2)  ) + "px"
-						}).fadeIn( options.fadeSpeed  )
+						}).fadeIn( options.fadeSpeed );
+						if( $txt ) {
+							$txtdiv = $('<div />', {
+								'id': 'simple-lightbox-text',
+								'text': $txt
+							})
+							$txtdiv.appendTo( $ovl ).css({
+									'position': 'absolute',
+									'zIndex': '1000',
+									'top': ( ( $(window).height()/2) + ( $pic.height()/2 ) ) + "px",
+									'left': ( ( $(window).width()/2) - ( $txtdiv.width() / 2 ) ) + 'px', 
+									'display': 'none'
+							}).fadeIn( options.fadeSpeed )
+						}
 					},
 					'click': function(){
 						$(this).parent().trigger('click');
 					}
 				});
-				if( $txt ) {
-					$ovl.append( $('<div />', {
-							'id': 'simple-lightbox-text',
-							'text': $txt,
-							css: ({
-								'position': 'absolute',
-								'top':  ( ( $(window).height()/2) + ($pic.height() ) ) + "px"
-							})
-						})
-					)
-				}
 				return false; // prevent link click event
 			})
 		})
