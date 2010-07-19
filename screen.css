@@ -13,10 +13,16 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-
 #simple-lightbox-overlay img {
 	background-color: #fff; /* set to avoid funny glitches with transparent pictures */
 	position: absolute;
 	border: 5px solid #9bbdde;
 	z-index: 9999;
+}
+#simple-lightbox-text {
+	background-color: #fff;
+	color: #06f;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 }

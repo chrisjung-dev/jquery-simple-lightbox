@@ -12,6 +12,7 @@
 		return this.each( function(){
 			$(this).click( function() {
 				$this = $(this);
+				$txt = ( $this.attr( 'title' ) ) ? $this.attr( 'title' ) : $this.find( 'img' ).attr( 'title' );
 				$ovl = $('<div/>', {
 					'id': 'simple-lightbox-overlay',
 					'click': function(e){ 
@@ -41,6 +42,17 @@
 						$(this).parent().trigger('click');
 					}
 				});
+				if( $txt ) {
+					$ovl.append( $('<div />', {
+							'id': 'simple-lightbox-text',
+							'text': $txt,
+							css: ({
+								'position': 'absolute',
+								'top':  ( ( $(window).height()/2) + ($pic.height() ) ) + "px"
+							})
+						})
+					)
+				}
 				return false; // prevent link click event
 			})
 		})
