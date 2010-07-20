@@ -5,6 +5,20 @@
 
 ===== Beschreibung =====
 
-Ein kleines jQuery-Snippet, dass eine einfache Lightbox erzeugt.
+	Ein kleines jQuery-Snippet, dass eine einfache Lightbox erzeugt.
 
-Entwickelt wird das ganze für campino2k.de, wo das ganze eine "größere" Lightbox mit massig Overhead ersetzen soll.
+	Entwickelt wird das ganze für campino2k.de, wo das ganze eine "größere" Lightbox mit massig Overhead ersetzen soll.
+
+===== Benutzung / Usage =====
+	
+	Ein Beispiel für die Benutzung findet sich in der index.html
+
+	An Example of how to use can be found in index.html
+
+===== Parameter  =====
+
+	use e.g. to change the fading-speed
+	
+	$([yourselector]).simpleLightbox({
+		'fadingSpeed': 'fast'
+	})
