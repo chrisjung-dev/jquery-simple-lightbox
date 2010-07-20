@@ -46,7 +46,11 @@
 									'position': 'absolute',
 									'zIndex': '1000',
 									'top': ( ( $(window).height()/2) + ( $pic.height()/2 ) ) + "px",
-									'left': ( ( $(window).width()/2) - ( $txtdiv.width() / 2 ) ) + 'px', 
+									'left': ( ( $(window).width()/2) - ( $pic.width() / 2 ) ) + 'px',
+								//	'margin': '0 auto',
+									'marginTop': '1em',
+									'padding': '5px',
+									'width': $pic.outerWidth() - 10  + 'px',
 									'display': 'none'
 							}).fadeIn( options.fadeSpeed )
 						}
