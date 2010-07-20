@@ -20,7 +20,7 @@
 					},
 					css: ({
 						'height': $(document).height() + 'px',
-						'backgroundPosition': 'center ' + ($(window).height()/2) + 'px' // need to overreide the "center center"-CSS-Setting, if any, to center the loading icon in the viewport
+						'backgroundPosition': 'center ' + ($(window).height()/2) + $(document).scrollTop() +  'px' // need to overreide the "center center"-CSS-Setting, if any, to center the loading icon in the viewport
 					}),
 				})
 				$ovl.appendTo( 'body' );
@@ -45,7 +45,7 @@
 							$txtdiv.appendTo( $ovl ).css({
 									'position': 'absolute',
 									'zIndex': '1000',
-									'top': ( ( $(window).height()/2) + ( $pic.height()/2 ) ) + "px",
+									'top': ( ( $(window).height()/2) + ( $pic.height()/2 ) + $(document).scrollTop() ) + "px",
 									'left': ( ( $(window).width()/2) - ( $pic.width() / 2 ) ) + 'px',
 								//	'margin': '0 auto',
 									'marginTop': '1em',
