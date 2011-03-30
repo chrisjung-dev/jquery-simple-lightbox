@@ -21,14 +21,14 @@
 					css: ({
 						'height': $(document).height() + 'px',
 						'backgroundPosition': 'center ' + ($(window).height()/2) + $(document).scrollTop() +  'px' // need to overreide the "center center"-CSS-Setting, if any, to center the loading icon in the viewport
-					}),
-				})
+					})
+				});
 				$ovl.appendTo( 'body' );
 				$(document).one( 'keydown',  function(e) { // add "self-destruct"-event	to close the lightbox
 					if( e.which == 27 ) {
 						$ovl.trigger('click');
 					}
-				})
+				});
 				$pic = $( '<img />', {
 					'src': $this.attr('href'),
 					css: ({'display': 'none'}),
@@ -41,7 +41,7 @@
 							$txtdiv = $('<div />', {
 								'id': 'simple-lightbox-text',
 								'text': $txt
-							})
+							});
 							$txtdiv.appendTo( $ovl ).css({
 									'position': 'absolute',
 									'zIndex': '1000',
@@ -52,7 +52,7 @@
 									'padding': '5px',
 									'width': $pic.outerWidth() - 10  + 'px',
 									'display': 'none'
-							}).fadeIn( options.fadeSpeed )
+							}).fadeIn( options.fadeSpeed );
 						}
 					},
 					'click': function(){
@@ -60,10 +60,10 @@
 					}
 				});
 				return false; // prevent link click event
-			})
-		})
-	},
+			});
+		});
+	};
 	$.fn.simpleLightbox.defaults = {
 		fadeSpeed: 'slow'
-	}
+	};
 })(jQuery);
